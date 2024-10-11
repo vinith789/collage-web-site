@@ -1,6 +1,7 @@
 body{
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
 }
 
 /* Logo container */
@@ -392,11 +393,20 @@ p {
     text-align: center;
   }
   .logo img {
-    margin-left: 0;
+    margin-left: 60px;
   }
   .text-content {
     margin-left: 0;
     margin-top: 20px;
+  }
+  .text-content p{
+    font-size: 12px;
+  }
+  .rank-title{
+    font-size: 24px;
+  }
+  .rank-subtitle{
+    font-size: 26px;
   }
   .rank-section {
     margin-left: 35px;
@@ -456,8 +466,13 @@ p {
   }
 }
 @media (max-width: 480px) {
+  .logo img {
+    margin-left: 50px;
+    width: 80px;
+    height: auto;
+  }
   .text-content h1{
-    font-size: 16px;
+    font-size: 18px;
   }
   header .text-content p{
     display: none;
