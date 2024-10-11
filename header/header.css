@@ -1,0 +1,502 @@
+body{
+  padding: 0;
+  margin: 0;
+}
+
+/* Logo container */
+.logo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 35px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Logo image */
+.logo img {
+  margin-left: 100px;
+  width: 80px;
+  height: auto;
+}
+
+/* Center text content */
+.text-content {
+  text-align: center;
+  flex-grow: 1; /* Take up the remaining space between logo and rank section */
+}
+
+/* Title and paragraph styling */
+.title-1, .title-2, p {
+  margin: 0;
+}
+
+.title-1 {
+  color: #eb4e35;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.title-2 {
+  color: #2f7436;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+p {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Rank Section Styling */
+.rank-section {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+
+/* Rank Content */
+.rank-content {
+  text-align: right;
+  animation: pulse 1.5s infinite;
+}
+
+/* Rank Title */
+.rank-title {
+  margin-right: 25px;
+  font-size: 26px;
+  font-weight: bold;
+  color: #eb4e35;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+}
+
+/* Rank Subtitle */
+.rank-subtitle {
+  font-size: 30px;
+  font-weight: bold;
+  color: green;
+  letter-spacing: 1px;
+}
+/* Toggle bar container (hidden initially) */
+.toggle-bar {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  margin-right: 35px;
+}
+
+.toggle-icon {
+  font-size: 28px;
+  cursor: pointer;
+  padding: 10px;
+}
+.close-icon{
+  font-size: 38px;
+  cursor: pointer;
+}
+/* Pulse Animation */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+
+/* Styling for marquee content */
+.scrolling-content {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #e0f2f1;
+  padding: 10px 0;
+  position: relative;
+  overflow: hidden; /* Hide any overflow from the marquee */
+}
+/* Button container styling */
+.button-container {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  z-index: 1; /* Ensure buttons are above the scrolling text */
+  background-color: #e0f2f1;
+  padding: 0 10px;
+}
+/* Marquee wrapper styling */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+/* Marquee text styling */
+.marquee-text {
+  color: #000;
+  font-size: 16px;
+  font-weight: bold;
+  white-space: nowrap; /* Prevent line breaks */
+  margin-left: 70px; /* Ensure space for buttons */
+}
+.marquee-text:hover{
+  cursor: pointer;
+  color: #eb4e35;
+}
+/* Marquee button styling */
+.marquee-button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+/* Button hover effect */
+.marquee-button:hover {
+  background-color: #218838;
+  transform: scale(1.05);
+}
+/* Navbar styling */
+.navbar {
+  display: block;
+  background-color: #28a745;
+  padding: 10px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+/* Navbar list styling */
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+}
+/* Navbar list items styling */
+.navbar li {
+  margin: 0 15px; /* Space between navbar items */
+  position: relative;
+}
+/* Navbar links styling */
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  position: relative;
+  display: inline-block;
+}
+/* Navbar link hover effect */
+.navbar a:hover {
+  background-color: #218838;
+  color: #fff;
+  transform: translateY(-5px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+/* Active link styling */
+.navbar a.active {
+  background-color: #1e7e34;
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4); /* Shadow for active state */
+  transform: scale(1.1);
+}
+/* Animation for navbar links on hover */
+.navbar a::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: #fff; /* Underline color */
+  transition: width 0.4s ease, left 0.4s ease;
+  transform: translateX(-50%);
+}
+/* Underline effect on hover */
+.navbar a:hover::before {
+  width: 100%;
+  left: 10;
+}
+@media (min-width: 1024px) and (max-width: 1266px) {
+  /* Navbar styling */
+  .navbar {
+    background-color: #28a745;
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    max-width: 100%;
+    margin: 0 auto; /* Center the navbar */
+  }
+
+  /* Navbar list styling */
+  .navbar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  /* Navbar list items styling */
+  .navbar li {
+    margin: 0 8px; /* Adjust spacing to fit items */
+  }
+
+  /* Navbar links styling */
+  .navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px; /* Adjust font size */
+    font-weight: bold;
+    padding: 8px 10px; /* Adjust padding */
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s, transform 0.3s;
+    position: relative;
+    display: inline-block;
+  }
+
+  /* Navbar link hover effect */
+  .navbar a:hover {
+    background-color: #218838;
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Active link styling */
+  .navbar a.active {
+    background-color: #1e7e34;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+  }
+
+  /* Animation for navbar links on hover */
+  .navbar a::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: #fff; /* Underline color */
+    transition: width 0.4s ease, left 0.4s ease;
+    transform: translateX(-50%);
+  }
+
+  /* Underline effect on hover */
+  .navbar a:hover::before {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* Ensuring navbar content remains in one line for widths 1055px and below */
+@media (max-width: 1055px) {
+  .navbar ul {
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  .navbar li {
+    margin: 0 4px; /* Further reduce spacing */
+  }
+
+  .navbar a {
+    font-size: 12px; /* Reduce font size */
+    padding: 6px 8px; /* Reduce padding */
+  }
+}
+@media (max-width: 930px) {
+  .logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Image styling */
+  .logo img {
+    margin-right: 65px;
+    width: 80px; /* Adjust width as needed */
+    height: auto;
+  }
+
+  /* Text content styling */
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    margin-top: -75px;
+    margin-left: 280px; /* Adjust space between image and text */
+  }
+
+  /* Ensure rank section is below image and text content */
+  .rank-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 250px;
+    margin-top: 20px; /* Adjust space between text content and rank section */
+  }
+
+  /* Rank content styling */
+  .rank-content {
+    display: flex;
+    flex-direction: row;
+  }
+
+  /* Ensure the text in rank content is displayed horizontally */
+  .rank-title, .rank-subtitle {
+    display: inline-block;
+    margin-right: 10px; /* Adjust spacing between title and subtitle */
+  }
+}
+
+@media (max-width: 770px) {
+  .close-icon{
+    display: none;
+   }
+     /* toggle bar content */
+  .toggle-bar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    margin-right: -20px;
+    z-index: 100;
+  }
+  .logo {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .logo img {
+    margin-left: 0;
+  }
+  .text-content {
+    margin-left: 0;
+    margin-top: 20px;
+  }
+  .rank-section {
+    margin-left: 35px;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .navbar {
+    display: none;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.9);
+    position: fixed;
+    top: 60px;
+    right: 0;
+    width: 70%;
+    height: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  .navbar ul {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar li {
+    margin: 10px 0;
+    padding-left: 20px;
+  }
+  .navbar a {
+    font-size: 14px;
+    padding: 10px 15px;
+    color: #333;
+  }
+  .navbar a:hover {
+    background-color: #28a745;
+  }
+  .marquee-wrapper {
+    overflow: hidden;
+  }
+  .marquee-text {
+    font-size: 14px;
+    padding: 0 5px;
+  }
+  .marquee-button {
+    font-size: 10px;
+    padding: 4px 8px;
+    width: auto;
+  }
+  /* Compress the entire marquee container */
+  .scrolling-content {
+    padding: 5px 0;
+  }
+  .button-container{
+    margin-left: -20px;
+  }
+  .marquee-container {
+    padding: 10px;
+  }
+}
+@media (max-width: 480px) {
+  .text-content h1{
+    font-size: 16px;
+  }
+  header .text-content p{
+    display: none;
+  }
+  .rank-title{
+    font-size: 18px;
+  }
+  .rank-subtitle{
+    font-size: 16px;
+  }
+  .scrolling-content {
+    background-color: white;
+    margin-top: -10px;
+  }
+  .button-container {
+    background-color: #e0f2f1;
+    display: flex;            /* Use flexbox for horizontal alignment */
+    justify-content: start;  /* Center the buttons */
+    flex-direction: row;      /* Keep buttons in one line */
+    width: 100%;              /* Full width for buttons */
+    padding: 5px;
+   }
+  .marquee-button {
+    font-size: 10px;
+    padding: 4px 8px;
+    width: auto;
+  }
+  .marquee-wrapper {
+    margin-top: 55px;        /* Increased space above marquee */
+    width: 100%;              /* Ensure marquee is 100% width */
+    overflow: hidden;         /* Prevent overflow if needed */
+  }
+  .marquee-text {
+    font-size: 14px;         /* Adjust font size for marquee text */
+    line-height: 1.5;        /* Increase line height for spacing */
+    white-space: nowrap;      /* Prevent wrapping */
+    width: 100%;              /* Ensure marquee text takes full width */
+    margin-left: 10px;
+  }
+}
+
+
