@@ -5,18 +5,29 @@ body{
 }
 /* Logo container */
 .logo {
+  padding: 20px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  height: 85px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 35px;
-  width: 100%;
+  margin-top: 20px;
   box-sizing: border-box;
 }
 /* Logo image */
 .logo img {
-  margin-left: 100px;
+  margin-left: 85px;
   width: 80px;
   height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.logo img:hover {
+  opacity: 1; /* Make the logo fully visible on hover */
 }
 /* Center text content */
 .text-content {
@@ -38,8 +49,8 @@ body{
   font-size: 24px;
 }
 .text-content p {
-  font-size: 14px;
-  color: #333;
+  font-size: 16px;
+  color: white;
 }
 /* Rank Section Styling */
 .rank-section {
@@ -72,6 +83,7 @@ body{
 /* toggle bar */
 .toggle-bar {
   display: none;
+  color: white;
   position: absolute;
   right: 20px;
   top: 20px;
@@ -79,6 +91,7 @@ body{
 }
 .toggle-icon, .close-icon {
   font-size: 28px;
+  color: white;
   cursor: pointer;
 }
 /* Pulse Animation */
@@ -240,7 +253,7 @@ body{
 /* Ensuring navbar content remains in one line for widths 1055px and below */
 @media (max-width: 1055px) {
   .logo img{
-    margin-left: 60px;
+    margin-left: 50px;
   }
   .navbar ul {
     flex-wrap: nowrap;
@@ -290,13 +303,16 @@ body{
     margin-right: 10px; /* Adjust spacing between title and subtitle */
   }
 }
-@media (max-width: 770px) {
+@media screen and (max-width: 775px) {
   .close-icon{
     display: none;
    }
      /* toggle bar content */
   .toggle-bar {
     display: flex;
+  }
+  .card-container {
+    display: none !important; /* Ensure the card content is hidden below 775px */
   }
   .logo {
     flex-direction: column;
@@ -320,7 +336,7 @@ body{
     font-size: 26px;
   }
   .rank-section {
-    margin-left: 35px;
+    margin-left: 10px;
     margin-top: 20px;
     justify-content: center;
   }
