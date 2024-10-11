@@ -311,7 +311,9 @@ body{
   .toggle-bar {
     display: flex;
   }
-
+  .card-container {
+    display: none !important; /* Ensure the card content is hidden below 775px */
+  }
   .logo {
     flex-direction: column;
     align-items: center;
