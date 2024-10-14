@@ -15,12 +15,12 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5); /* A black overlay with 0.5 transparency */
+  background: rgba(255, 255, 255, 0.5); /* A black overlay with 0.5 transparency */
   z-index: 1;
 }
 .card-container {
   position: absolute;
-  top: 50%;
+  top: 45%;
   width: 100%;
   height: 50%; /* Cards area within the background video */
   display: flex;

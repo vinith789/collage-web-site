@@ -50,7 +50,7 @@ body{
 }
 .text-content p {
   font-size: 16px;
-  color: white;
+  color: black;
 }
 /* Rank Section Styling */
 .rank-section {
@@ -85,13 +85,13 @@ body{
   display: none;
   color: white;
   position: absolute;
-  right: 20px;
-  top: 20px;
+  right: 10px;
+  top: 0;
   z-index: 100;
 }
 .toggle-icon, .close-icon {
-  font-size: 28px;
-  color: white;
+  font-size: 32px;
+  color: black;
   cursor: pointer;
 }
 /* Pulse Animation */
@@ -251,9 +251,18 @@ body{
   }
 }
 /* Ensuring navbar content remains in one line for widths 1055px and below */
-@media (max-width: 1055px) {
+@media (max-width: 1024px) {
   .logo img{
-    margin-left: 50px;
+    margin-left: 10px;
+  }
+  .text-content p{
+    font-size: 12px;
+  }
+  .rank-title{
+    font-size: 18px;
+  }
+  .rank-subtitle{
+    font-size: 18px;
   }
   .navbar ul {
     flex-wrap: nowrap;
@@ -266,43 +275,7 @@ body{
     padding: 6px 8px;
   }
 }
-@media (max-width: 930px) {
-  .logo {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  /* Image styling */
-  .logo img {
-    width: 80px;
-    height: auto;
-  }
-  /* Text content styling */
-  .text-content {
-    display: flex;
-    flex-direction: column;
-    margin-top: -90px;
-    margin-left: 250px; /* Adjust space between image and text */
-  }
-  /* Ensure rank section is below image and text content */
-  .rank-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 260px;
-    margin-top: 20px; /* Adjust space between text content and rank section */
-  }
-  /* Rank content styling */
-  .rank-content {
-    display: flex;
-    flex-direction: row;
-  }
-  /* Ensure the text in rank content is displayed horizontally */
-  .rank-title, .rank-subtitle {
-    display: inline-block;
-    margin-right: 10px; /* Adjust spacing between title and subtitle */
-  }
-}
+
 @media screen and (max-width: 775px) {
   .close-icon{
     display: none;
@@ -395,19 +368,19 @@ body{
 @media (max-width: 480px) {
   .logo img {
     margin-left: 5px;
-    width: 70px;
+    width: 80px;
   }
   .text-content h1{
-    font-size: 16px;
+    font-size: 18px;
   }
   header .text-content p{
     display: none;
   }
   .rank-title{
-    font-size: 14px;
+    font-size: 18px;
   }
   .rank-subtitle{
-    font-size: 14px;
+    font-size: 18px;
   }
   .scrolling-content {
     background-color: white;
@@ -439,5 +412,3 @@ body{
     margin-left: 10px;
   }
 }
-
-
